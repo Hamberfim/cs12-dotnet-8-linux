@@ -1,0 +1,14 @@
+﻿WriteLine("--------------------------------------------------------------------------");
+WriteLine("Type\t\tBytes\tMin Value\t\t\t\tMax Value");
+WriteLine("--------------------------------------------------------------------------");
+WriteLine($"sbyte\t\t{sizeof(sbyte)}\t{sbyte.MinValue}\t\t\t\t\t{sbyte.MaxValue}");
+WriteLine($"byte\t\t{sizeof(byte)}\t{byte.MinValue}\t\t\t\t\t{byte.MaxValue}");
+WriteLine($"short\t\t{sizeof(short)}\t{short.MinValue}\t\t\t\t\t{short.MaxValue}");
+WriteLine($"ushort\t\t{sizeof(ushort)}\t{ushort.MinValue}\t\t\t\t\t{ushort.MaxValue}");
+WriteLine($"int\t\t{sizeof(int)}\t{int.MinValue}\t\t\t\t{int.MaxValue}");
+WriteLine($"uint\t\t{sizeof(uint)}\t{uint.MinValue}\t\t\t\t\t{uint.MaxValue}");
+WriteLine($"long\t\t{sizeof(long)}\t{long.MinValue}\t\t\t{long.MaxValue}");
+WriteLine($"ulong\t\t{sizeof(ulong)}\t{ulong.MinValue}\t\t\t\t\t{ulong.MaxValue}");
+WriteLine($"float\t\t{sizeof(float)}\t{float.MinValue}\t\t\t\t{float.MaxValue}");
+WriteLine($"double\t\t{sizeof(double)}\t{double.MinValue}\t\t{double.MaxValue}");
+WriteLine($"decimal\t\t{sizeof(decimal)}\t{decimal.MinValue}\t\t{decimal.MaxValue}");
