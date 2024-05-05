@@ -4,6 +4,7 @@ TimesTable(7, 15); // parameters (byte number, byte? size) byte =0-255
 // set console config to culture
 ConfigConsole();
 // ConfigConsole("fr-FR");  // set it to France
+WriteLine("=================================================");
 
 decimal myAmount = 149.99m;
 decimal taxToPay = CalculateVatTax(amount: myAmount, regionCode: "FR");
