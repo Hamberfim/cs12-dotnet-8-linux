@@ -2,7 +2,21 @@
 using System.Globalization;
 partial class Program
 {
-    // culture specific config for console
+    // a times table function
+    static void TimesTable(byte number, byte size = 12)
+    {
+        WriteLine("=================================================");
+        WriteLine($"This a {number} times table with {size} rows.");
+        WriteLine();
+
+        for (int row = 1; row <= size; row++)
+        {
+            WriteLine($"{row} X {number} = {row * number}");
+        }
+        WriteLine();
+    }
+
+    // culture specific config for console's output
     static void ConfigConsole(string culture = "en-US", bool useComputerCulture = false)
     {
         // enable Unicode characters
@@ -12,19 +26,6 @@ partial class Program
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
         }
         WriteLine($"Current Culture Setting: {CultureInfo.CurrentCulture.DisplayName}");
-    }
-
-    // a times table function
-    static void TimesTable(byte number, byte size = 12)
-    {
-        WriteLine($"This a {number} times table with {size} rows.");
-        WriteLine();
-
-        for (int row = 1; row <= size; row++)
-        {
-            WriteLine($"{row} X {number} = {row * number}");
-        }
-        WriteLine();
     }
 
     // value added tax app

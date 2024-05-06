@@ -4,7 +4,6 @@ WriteLine("=== Top Level Functions ===");
 
 WhatsMyNameSpace();// call the function 
 
-// define the local function that is called above
 // moved to Program.Functions.cs 
 // void WhatsMyNameSpace()
 // {
