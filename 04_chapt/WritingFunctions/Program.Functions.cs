@@ -1,5 +1,6 @@
 // cultures info
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 partial class Program
 {
@@ -147,6 +148,34 @@ partial class Program
                 WriteLine($"{i} throws {ex.GetType()}: {ex.Message}");
             }
 
+        }
+    }
+
+    static int FibImperative(uint term)
+    {
+        if (term == 0)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
+        else if (term == 1)
+        {
+            return 0;
+        }
+        else if (term == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            return FibImperative(term - 1) + FibImperative(term - 2);
+        }
+    }
+
+    static void RunFibImperative()
+    {
+        for (uint i = 1; i <= 30; i++)
+        {
+            WriteLine($"The {CardinalToOrdinal(i)} term of the Fibonacci sequence is {FibImperative(term: i)}.");
         }
     }
 }

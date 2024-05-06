@@ -36,3 +36,6 @@ RunCardinalToOrdinal();
 
 WriteLine("\n============= Factorial ===================");
 RunFactorial();
+
+WriteLine("\n============= Fibonacci ===================");
+RunFibImperative();
