@@ -30,3 +30,9 @@ WriteLine("\n=================================================");
 // "OR" or "AK" or "MT" => 0.0m, // Oregon/Alaska/Montana
 taxToPay = CalculateVatTax(amount: myAmount, regionCode: "OR");
 WriteLine($"But in U.S locations like Alaska, Montana and Oregon you would pay {taxToPay:C2} tax on {myAmount:C2} \nbecause they have no State tax.");
+
+WriteLine("\n============= Cardinal To Ordinal ===================");
+RunCardinalToOrdinal();
+
+WriteLine("\n============= Factorial ===================");
+RunFactorial();
