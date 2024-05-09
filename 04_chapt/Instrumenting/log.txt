@@ -1,3 +1,6 @@
+This is a Debug.WriteLine() message
 This is a Trace.WriteLine() message
 A Trace Error message
 A Trace Warning message
+[/home/adhamlin/Documents/GitHub/cs12-dotnet-8-linux/04_chapt/Instrumenting/Program.cs]
+ <Main>$ on line 63. Expression: x > 2

@@ -58,6 +58,10 @@ Trace.WriteLineIf(traceSwitch.TraceWarning, "A Trace Warning message");
 Trace.WriteLineIf(traceSwitch.TraceInfo, "A Trace Info message");
 Trace.WriteLineIf(traceSwitch.TraceVerbose, "A Trace Verbose message");
 
+// for source code logging
+int x = 3;
+LogSourceDetails(x > 2);  // will write to the log file
+
 // flush and close any buffered trace listeners for Debug and Trace
 // Debug.close();  // error Debug does not contain a definition for close
 // Trace.close();  // error Trace does not contain a definition for close
