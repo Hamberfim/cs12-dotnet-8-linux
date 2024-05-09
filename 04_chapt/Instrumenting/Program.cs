@@ -36,3 +36,7 @@ logFile.Close(); // close the log file
 
 // run in the terminal: dotnet run --configuration Release
 // run in the terminal: dotnet run --configuration Debug
+
+/* adding NuGet packages:
+dotnet add package Microsoft.Extensions.Configuration.Binder
+dotnet add package Microsoft.Extensions.Configuration.Json
