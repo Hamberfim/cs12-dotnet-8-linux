@@ -1,0 +1,2 @@
+This is a Debug.WriteLine() message
+This is a Trace.WriteLine() message
