@@ -67,4 +67,21 @@ public class CalculatorUnitTests
         // assert - compare the expected and actual results
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void TestDividingByZero()
+    {
+        // arrange - set up inputs
+        double num1 = 2;
+        double num2 = 0;
+        double expected = -1;
+        Calculator calculator = new Calculator();
+
+        // act - execute the function
+        double actual = calculator.Division(num1, num2);
+
+        // act and assert - execute the function
+        Assert.Equal(expected, actual);
+
+    }
 }
