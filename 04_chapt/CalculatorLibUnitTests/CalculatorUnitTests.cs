@@ -69,19 +69,66 @@ public class CalculatorUnitTests
     }
 
     [Fact]
-    public void TestDividingByZero()
+    public void TestDividingByZeroReturnsNegativeOne()
     {
-        // arrange - set up inputs
+        // arrange
         double num1 = 2;
         double num2 = 0;
         double expected = -1;
         Calculator calculator = new Calculator();
 
-        // act - execute the function
+        // act
         double actual = calculator.Division(num1, num2);
 
-        // act and assert - execute the function
+        // assert
         Assert.Equal(expected, actual);
+    }
 
+    [Fact]
+    public void TestDividingPositiveNumberByZero()
+    {
+        // arrange
+        double num1 = 2;
+        double num2 = 0;
+        double expected = double.PositiveInfinity;
+        Calculator calculator = new Calculator();
+
+        // act
+        double actual = calculator.Division(num1, num2);
+
+        // assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void TestDividingNegativeNumberByZero()
+    {
+        // arrange
+        double num1 = -2;
+        double num2 = 0;
+        double expected = double.NegativeInfinity;
+        Calculator calculator = new Calculator();
+
+        // act
+        double actual = calculator.Division(num1, num2);
+
+        // assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void TestDividingZeroByZero()
+    {
+        // arrange
+        double num1 = 0;
+        double num2 = 0;
+        double expected = double.NaN;
+        Calculator calculator = new Calculator();
+
+        // act
+        double actual = calculator.Division(num1, num2);
+
+        // assert
+        Assert.Equal(expected, actual);
     }
 }
