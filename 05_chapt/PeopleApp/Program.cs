@@ -17,7 +17,7 @@ bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon | WondersOfThe
 
 // 
 Person tammi = new Person();
-tammi.Name = "Tammmi Smith";
+tammi.Name = "Tammi Smith";
 bob.Children.Add(tammi);
 
 Person kyle = new Person();
