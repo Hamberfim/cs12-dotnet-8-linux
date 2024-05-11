@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- <TargetFramework>net8.0</TargetFramework> -->
+    <!-- .NET STandard 2 can be used by .Net Framework, Xamarin, and modern .Net -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <!-- Compile this lib using C# 12 -->
+    <LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <using Include="System.Console" static="true" />
+  </ItemGroup>
+
+</Project>
