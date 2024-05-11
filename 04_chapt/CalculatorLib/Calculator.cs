@@ -20,13 +20,14 @@ public class Calculator
     // This will throw an exception if num2 is 0
     public double Division(double num1, double num2)
     {
-        if(num2 == 0) {
+        if (num2 == 0)
+        {
             return -1;
         }
         else
         {
             return num1 / num2;
         }
-         
+
     }
 }
