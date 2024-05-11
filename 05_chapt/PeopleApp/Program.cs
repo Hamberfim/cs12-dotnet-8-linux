@@ -16,13 +16,17 @@ WriteLine(bob + "\n"); // implicit call to ToString method, i.e., WriteLine(bob.
 bob.Name = "Bob Smith";
 bob.Born = new DateTimeOffset(year: 1966, month: 4, day: 3, hour: 7, minute: 28, second: 0, offset: TimeSpan.FromHours(-6));  // US Central
 bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
+bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
 WriteLine($"Format: {bob.Name} was born on {bob.Born}. {bob.Name}'s favorite ancient wonder is {bob.FavoriteAncientWonder}.");
+WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}.\n");
 
 // using object initializer syntax
 Person larry = new()
 {
     Name = "Larry Smith",
     Born = new DateTimeOffset(year: 1997, month: 3, day: 7, hour: 11, minute: 28, second: 0, offset: TimeSpan.Zero),
-    FavoriteAncientWonder = WondersOfTheAncientWorld.MausoleumAtHalicarnassus
+    FavoriteAncientWonder = WondersOfTheAncientWorld.MausoleumAtHalicarnassus,
+    BucketList = WondersOfTheAncientWorld.GreatPyramidOfGiza | WondersOfTheAncientWorld.HangingGardensOfBabylon
 };
 WriteLine($"Format: {larry.Name} was born on {larry.Born}. {larry.Name}'s favorite ancient wonder is {larry.FavoriteAncientWonder}.");
+WriteLine($"{larry.Name}'s bucket list is {larry.BucketList}.\n");

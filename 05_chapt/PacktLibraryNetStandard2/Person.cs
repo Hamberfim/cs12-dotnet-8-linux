@@ -10,7 +10,8 @@ public class Person : object
 
     public string? Name;
     public DateTimeOffset Born;   // date, time, hours offset from UTC (related to time zone)
-    public WondersOfTheAncientWorld FavoriteAncientWonder;
+    public WondersOfTheAncientWorld FavoriteAncientWonder; // single enum value
+    public WondersOfTheAncientWorld BucketList; // multiple enum values
 
     #endregion
 }
