@@ -1,5 +1,6 @@
 ﻿using Packt.Shared;
 
+// console config output
 ConfigureConsole();
 // alternatives
 // ConfigureConsole(useComputerCulture: true);
