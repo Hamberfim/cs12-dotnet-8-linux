@@ -14,5 +14,9 @@ public class Person : object
     public WondersOfTheAncientWorld FavoriteAncientWonder; // single enum value
     public WondersOfTheAncientWorld BucketList; // multiple enum values
 
+    public const string Species = "Homo Sapien";  // constant
+
+    public readonly string HomePlanet = "Earth";  // readonly- set at runtime
+
     #endregion
 }

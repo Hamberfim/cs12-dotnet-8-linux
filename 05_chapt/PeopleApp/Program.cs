@@ -6,17 +6,23 @@ ConfigureConsole();
 // ConfigureConsole(useComputerCulture: true);
 // ConfigureConsole(culture: "fr-FR");
 
+#region Instantiating a class
+
 // Person bob = new Person(); // C# 1or later
 // var bob = new Person(); // C# 3 or later
 Person bob = new(); // C# 9 or later
 WriteLine(bob + "\n"); // implicit call to ToString method, i.e., WriteLine(bob.ToString());
+
+#endregion
+
+#region Setting and outputting field values
 
 bob.Name = "Bob Smith";
 bob.Born = new DateTimeOffset(year: 1966, month: 4, day: 3, hour: 7, minute: 28, second: 0, offset: TimeSpan.FromHours(-6));  // US Central
 bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
 bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
 
-// 
+// children
 Person tammi = new Person();
 tammi.Name = "Tammi Smith";
 bob.Children.Add(tammi);
@@ -33,6 +39,10 @@ foreach (Person child in bob.Children)
 {
     WriteLine($"{bob.Name}'s Child: {child.Name}");
 }
+
+#endregion
+
+#region Setting field values using object initializer syntax | Storing multiple values using an enum type
 
 // using object initializer syntax
 Person larry = new()
@@ -51,3 +61,32 @@ for (int i = 0; i < larry.Children.Count; i++)
     WriteLine($"{larry.Name}'s Child: {larry.Children[i].Name}");
 }
 WriteLine(); // space in output
+
+#endregion
+
+#region Making a field static
+BankAccount.InterestRate = 0.012m; //store a chared value in static field
+BankAccount jonesAccount = new();
+jonesAccount.AccountName = "Mr. Jones";
+jonesAccount.Balance = 2350;
+WriteLine($"{jonesAccount.AccountName} earned {(jonesAccount.Balance * BankAccount.InterestRate):C} interest.");
+
+BankAccount smithAccount = new();
+smithAccount.AccountName = "Miss Smith";
+smithAccount.Balance = 107;
+WriteLine($"{smithAccount.AccountName} earned {(smithAccount.Balance * BankAccount.InterestRate):C} interest.");
+
+#endregion
+
+#region Making a field constant
+
+// constant field in Person.cs
+WriteLine($"{larry.Name} is a {Person.Species}.");  // accessible by its type
+
+#endregion
+
+#region Making a field readonly
+// readonly field in Person.cs
+WriteLine($"{bob.Name}  was born on planet {bob.HomePlanet}");  // accessible by its variable
+
+#endregion
