@@ -18,5 +18,18 @@ public class Person : object
 
     public readonly string HomePlanet = "Earth";  // readonly- set at runtime
 
+    public readonly DateTime Instantiated;
+
+    #endregion
+
+    #region Constructor called when using new to initialize a type
+
+    public Person()
+    {
+        // set default values in the constructor
+        Name = "Unknown";
+        Instantiated = DateTime.Now;
+    }
+
     #endregion
 }

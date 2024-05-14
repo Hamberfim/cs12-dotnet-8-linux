@@ -7,13 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibraryNetStandard2", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleApp", "PeopleApp\PeopleApp.csproj", "{8533AFA9-2FCF-4FAD-814C-0F913E6EEA82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibraryModern", "PacktLibraryModern\PacktLibraryModern.csproj", "{20A2676B-C17C-416D-A122-5B4E328DC5D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B15B6356-5AD9-418A-8DE9-5ABD4B2236D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +23,12 @@ Global
 		{8533AFA9-2FCF-4FAD-814C-0F913E6EEA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8533AFA9-2FCF-4FAD-814C-0F913E6EEA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8533AFA9-2FCF-4FAD-814C-0F913E6EEA82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A2676B-C17C-416D-A122-5B4E328DC5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A2676B-C17C-416D-A122-5B4E328DC5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A2676B-C17C-416D-A122-5B4E328DC5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A2676B-C17C-416D-A122-5B4E328DC5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

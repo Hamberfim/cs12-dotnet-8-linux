@@ -1,4 +1,5 @@
-﻿using Packt.Shared;
+﻿
+using Packt.Shared;
 
 // console config output
 ConfigureConsole();
@@ -88,5 +89,32 @@ WriteLine($"{larry.Name} is a {Person.Species}.");  // accessible by its type
 #region Making a field readonly
 // readonly field in Person.cs
 WriteLine($"{bob.Name}  was born on planet {bob.HomePlanet}");  // accessible by its variable
+
+#endregion
+
+#region Making fields required rather than const
+
+/* Required member 'Book.Isbn' must be set in the object initializer or attribute constructor.
+   Required member 'Book.Title' must be set in the object initializer or attribute constructor. */
+// Book book = new();  //  Error
+Book book = new()
+{
+    // set the two required properties using object initialization
+    Isbn = "978-0000000000",
+    Title = "Some Fictional Book"
+};
+
+// set the other properties
+book.Author = "Sam A Stranger";
+book.PageCount = 299;
+
+WriteLine($"\n{book.Isbn}: '{book.Title}' was written by {book.Author} and has {book.PageCount} pages.");
+
+#endregion
+
+#region use the Person.cs constructor
+
+Person blankPerson = new();
+WriteLine($"{blankPerson.Name} of {blankPerson.HomePlanet} was created at {blankPerson.Instantiated}");
 
 #endregion
