@@ -40,4 +40,49 @@ public class Person : object
     }
 
     #endregion
+
+    #region Method: an action a type can preform
+    public void WriteToConsole()
+    {
+        WriteLine($"{Name} was born on {Born:dddd}.");
+    }
+
+    public string GetOrigin()
+    {
+        return $"{Name} was born on {HomePlanet}.";
+    }
+    #endregion
+
+    #region Define and Pass params to a method of a type
+    public string SayHello()
+    {
+        return $"{Name} says, Hello!";
+    }
+
+    public string SayHelloTo(string name)
+    {
+        return $"{Name} says' Hello, {name}!";
+    }
+
+    #endregion
+
+    #region a single method name using overloading
+
+    public string Greetings()
+    {
+        return $"{Name} says, Greetings!";
+    }
+
+    public string Greetings(string name)
+    {
+        return $"{Name} says' Greetings, {name}!";
+    }
+    #endregion
+
+    #region methods with optional params
+    public string OptionalParameters(string command = "Run!", double number = 0.0, bool active = true)
+    {
+        return $"The command is {command}, the number is {number}, active is {active}.";
+    }
+    #endregion
 }

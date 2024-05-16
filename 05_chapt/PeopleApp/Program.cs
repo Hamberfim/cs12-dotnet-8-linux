@@ -117,9 +117,6 @@ Book book = new(isbn: "978-0000000000", title: "Some Fictional Book")
     PageCount = 299
 };
 
-
-
-
 WriteLine($"\n{book.Isbn}: '{book.Title}' was written by {book.Author} and has {book.PageCount} pages.");
 
 #endregion
@@ -133,4 +130,25 @@ WriteLine($"{blankPerson.Name} of {blankPerson.HomePlanet} was created at {blank
 Person marvin = new(initialName: "Marvin", homePlanet: "Mars");
 WriteLine($"{marvin.Name} is from {marvin.HomePlanet} and was created {marvin.Instantiated}");
 
+#endregion
+
+#region Call the Method action a type can preform
+bob.WriteToConsole(); // void return method
+WriteLine(bob.GetOrigin());  // string return method
+#endregion
+
+#region Pass params to a method of a type
+WriteLine(bob.SayHello());  //without param arguments
+WriteLine(bob.SayHelloTo("Tina"));  // with param arguments
+#endregion
+
+#region  single method using overloading
+WriteLine(larry.Greetings());
+WriteLine(larry.Greetings("Barbara"));
+#endregion
+
+#region methods with optional params
+WriteLine(larry.OptionalParameters());  // default params used
+WriteLine(larry.OptionalParameters("Walk!", 99.7, false));  // passing param arguments
+WriteLine(larry.OptionalParameters(number: 52.4, command: "Skip!", active: false));  // passing named param arguments out of order
 #endregion
