@@ -97,16 +97,28 @@ WriteLine($"{bob.Name}  was born on planet {bob.HomePlanet}");  // accessible by
 /* Required member 'Book.Isbn' must be set in the object initializer or attribute constructor.
    Required member 'Book.Title' must be set in the object initializer or attribute constructor. */
 // Book book = new();  //  Error
-Book book = new()
-{
-    // set the two required properties using object initialization
-    Isbn = "978-0000000000",
-    Title = "Some Fictional Book"
-};
+// Book book = new()
+// {
+//     // set the two required properties using object initialization
+//     Isbn = "978-0000000000",
+//     Title = "Some Fictional Book"
+// };
 
 // set the other properties
-book.Author = "Sam A Stranger";
-book.PageCount = 299;
+// book.Author = "Sam A Stranger";
+// book.PageCount = 299;
+
+// now using the constructors with object initializer syntax
+Book book = new(isbn: "978-0000000000", title: "Some Fictional Book")
+{
+    // the parameter arguments above are required and are set using a decorator [SetsRequiredMembers] via the using statement 'using System.Diagnostics.CodeAnalysis;'
+    // the non-require arguments are provided below
+    Author = "Sam A Stranger",
+    PageCount = 299
+};
+
+
+
 
 WriteLine($"\n{book.Isbn}: '{book.Title}' was written by {book.Author} and has {book.PageCount} pages.");
 
@@ -116,5 +128,9 @@ WriteLine($"\n{book.Isbn}: '{book.Title}' was written by {book.Author} and has {
 
 Person blankPerson = new();
 WriteLine($"{blankPerson.Name} of {blankPerson.HomePlanet} was created at {blankPerson.Instantiated}");
+
+// use the overloaded constructor
+Person marvin = new(initialName: "Marvin", homePlanet: "Mars");
+WriteLine($"{marvin.Name} is from {marvin.HomePlanet} and was created {marvin.Instantiated}");
 
 #endregion
