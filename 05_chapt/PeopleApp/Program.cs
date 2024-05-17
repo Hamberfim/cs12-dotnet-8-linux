@@ -163,3 +163,25 @@ WriteLine($"Before a = {a}, b = {b}, c = {c}, d = {d}");
 larry.PassingParamsBy(a, b, ref c, out d);
 WriteLine($"After a = {a}, b = {b}, c = {c}, d = {d}");
 #endregion
+
+#region return multiple values using tuples
+// this method returns a tuple
+(int, string) components = larry.GetItemAndItsCount();
+WriteLine($"There are {components.Item1} {components.Item2} in stock.");
+
+/* (int Number, string Name) namedFruit = larry.GetNamedItemAndItsCount() can be shortened */
+var namedFruit = larry.GetNamedItemAndItsCount();
+WriteLine($"There are {namedFruit.Number} {namedFruit.Name} in stock.");
+#endregion
+
+#region creating tuples
+var aboutBob = (bob.Name, bob.Children.Count);
+WriteLine($"{aboutBob.Name} has {aboutBob.Count} children.");
+var aboutLarry = (larry.Name, larry.Children.Count);
+WriteLine($"{aboutLarry.Name} has {aboutLarry.Count} children.");
+#endregion
+
+#region deconstructing a tuple
+(int itemCount, string itemName) = larry.GetNamedItemAndItsCount();
+WriteLine($"There are {itemCount} {itemName} available.");
+#endregion

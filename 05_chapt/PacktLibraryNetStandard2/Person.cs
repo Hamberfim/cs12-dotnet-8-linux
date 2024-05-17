@@ -1,5 +1,6 @@
 // file scoped namespaced
 using System.ComponentModel;
+using System.Runtime.InteropServices;
 
 namespace Packt.Shared;
 
@@ -100,7 +101,20 @@ public class Person : object
         outValue++;
 
         WriteLine($"In the method byValue = {byValue}, inValue = {inValue}, refValue = {refValue}, outValue = {outValue}");
-
     }
+    #endregion
+
+    #region return multiple values using tuples
+    // this method returns a tuple
+    public (int, string) GetItemAndItsCount()
+    {
+        return (5, "Microchips");
+    }
+
+    public (int Number, string Name) GetNamedItemAndItsCount()
+    {
+        return (Number: 20, Name: "Apples");
+    }
+
     #endregion
 }
