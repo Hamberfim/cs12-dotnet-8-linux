@@ -152,3 +152,14 @@ WriteLine(larry.OptionalParameters());  // default params used
 WriteLine(larry.OptionalParameters("Walk!", 99.7, false));  // passing param arguments
 WriteLine(larry.OptionalParameters(number: 52.4, command: "Skip!", active: false));  // passing named param arguments out of order
 #endregion
+
+#region Passing param by value, in (readonly), ref, out
+int a = 10;
+int b = 20;
+int c = 30;
+int d = 40;
+
+WriteLine($"Before a = {a}, b = {b}, c = {c}, d = {d}");
+larry.PassingParamsBy(a, b, ref c, out d);
+WriteLine($"After a = {a}, b = {b}, c = {c}, d = {d}");
+#endregion

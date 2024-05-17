@@ -85,4 +85,22 @@ public class Person : object
         return $"The command is {command}, the number is {number}, active is {active}.";
     }
     #endregion
+
+    #region Passing param by value, in (readonly), ref, out
+    // Example Call: PassingParamsBy(byValue, inValue, ref refValue, out outValue)
+    public void PassingParamsBy(int byValue, in int inValue, ref int refValue, out int outValue)
+    {
+        // out params can not have a default value and must be initialized in the method
+        outValue = 100;
+
+        // increment each param value except the readonly 'inValue'
+        byValue++;
+        // inValue is readonly //
+        refValue++;
+        outValue++;
+
+        WriteLine($"In the method byValue = {byValue}, inValue = {inValue}, refValue = {refValue}, outValue = {outValue}");
+
+    }
+    #endregion
 }
