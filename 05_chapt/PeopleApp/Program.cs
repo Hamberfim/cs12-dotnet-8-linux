@@ -181,7 +181,15 @@ var aboutLarry = (larry.Name, larry.Children.Count);
 WriteLine($"{aboutLarry.Name} has {aboutLarry.Count} children.");
 #endregion
 
-#region deconstructing a tuple
+#region deconstructing a tuple with named fields
 (int itemCount, string itemName) = larry.GetNamedItemAndItsCount();
 WriteLine($"There are {itemCount} {itemName} available.");
+#endregion
+
+#region deconstructing other types using tuples
+var (name1, dob1) = bob;  // implicitly calls the deconstruct methods in the Person class
+WriteLine($"Deconstructed person: {name1} was born on {dob1}");
+
+var (name2, dob2, fav2) = bob;  // implicitly calls the deconstruct methods in the Person class
+WriteLine($"Deconstructed person: {name2} was born in {dob2.Year} and their favorite wonder is {fav2}");
 #endregion
