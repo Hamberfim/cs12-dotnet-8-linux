@@ -132,4 +132,8 @@ public class Person : object
     }
 
     #endregion
+
+    #region functionality using local functions
+
+    #endregion
 }

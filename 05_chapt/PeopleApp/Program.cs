@@ -190,6 +190,6 @@ WriteLine($"There are {itemCount} {itemName} available.");
 var (name1, dob1) = bob;  // implicitly calls the deconstruct methods in the Person class
 WriteLine($"Deconstructed person: {name1} was born on {dob1}");
 
-var (name2, dob2, fav2) = bob;  // implicitly calls the deconstruct methods in the Person class
+var (name2, dob2, fav2) = larry;  // implicitly calls the deconstruct methods in the Person class
 WriteLine($"Deconstructed person: {name2} was born in {dob2.Year} and their favorite wonder is {fav2}");
 #endregion
